@@ -13,6 +13,9 @@ Ragnarok (Official)
 The Island (with plugin)
 ![The Island Modified](https://user-images.githubusercontent.com/408350/31574080-11025a1c-b0c8-11e7-9652-0730602064cf.png)
 
+## Download
+
+https://github.com/tsebring/ArkModifiedSpawnLevelDistribution/releases
 
 ## Installation
 
