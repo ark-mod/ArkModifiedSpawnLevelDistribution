@@ -4,6 +4,16 @@
 
 Changes to spawn level distribution on The Island and Scorched Earth to match the official spawn level distribution on Ragnarok and The Center.
 
+The Island (Official)
+![The Island Official](https://user-images.githubusercontent.com/408350/31574077-00ba5c90-b0c8-11e7-96f5-2c0cb54fcd6b.png)
+
+Ragnarok (Official)
+![Ragnarok Official](https://user-images.githubusercontent.com/408350/31574074-e5e9ee44-b0c7-11e7-9ccd-5b2ff9bb6df2.png)
+
+The Island (with plugin)
+![The Island Modified](https://user-images.githubusercontent.com/408350/31574080-11025a1c-b0c8-11e7-9652-0730602064cf.png)
+
+
 ## Installation
 
 * Install ARK Beyond API (forked by me) on your server.
