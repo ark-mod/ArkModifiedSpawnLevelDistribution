@@ -17,6 +17,7 @@ int _cdecl Hook_APrimalDinoCharacter_GetRandomBaseLevel(APrimalDinoCharacter* _A
 	TArray<FDinoBaseLevelWeightEntry> baseLevelWeightEntries = _APrimalDinoCharacter->GetDinoBaseLevelWeightEntriesField();
 	//float npcLerpToMaxRandomBaseLevel = _APrimalDinoCharacter->GetNPCLerpToMaxRandomBaseLevelField();
 
+	//standard creatures
 	if (baseLevelWeightEntries.Num() == 4
 		&& baseLevelWeightEntries[0].EntryWeight == 1.0
 		&& (baseLevelWeightEntries[0].BaseLevelMinRange == 1.0 || baseLevelWeightEntries[0].BaseLevelMinRange == 5.0)
@@ -49,6 +50,40 @@ int _cdecl Hook_APrimalDinoCharacter_GetRandomBaseLevel(APrimalDinoCharacter* _A
 		baseLevelWeightEntries[3].EntryWeight = 0.55;
 		baseLevelWeightEntries[3].BaseLevelMinRange = 25.5;
 		baseLevelWeightEntries[3].BaseLevelMaxRange = 30.0;
+	}
+	//scorched earth wyverns
+	else if (baseLevelWeightEntries.Num() == 4
+		&& fabs(baseLevelWeightEntries[0].EntryWeight - 0.600000023841858) < 0.00001
+		&& baseLevelWeightEntries[0].BaseLevelMinRange == 1.0
+		&& baseLevelWeightEntries[0].BaseLevelMaxRange == 5.0
+
+		&& fabs(baseLevelWeightEntries[1].EntryWeight - 0.300000011920929) < 0.00001
+		&& baseLevelWeightEntries[1].BaseLevelMinRange == 6.0
+		&& baseLevelWeightEntries[1].BaseLevelMaxRange == 12.0
+
+		&& fabs(baseLevelWeightEntries[2].EntryWeight - 0.300000011920929) < 0.00001
+		&& baseLevelWeightEntries[2].BaseLevelMinRange == 13.0
+		&& baseLevelWeightEntries[2].BaseLevelMaxRange == 20.0
+
+		&& fabs(baseLevelWeightEntries[3].EntryWeight - 0.300000011920929) < 0.00001
+		&& baseLevelWeightEntries[3].BaseLevelMinRange == 21.0
+		&& baseLevelWeightEntries[3].BaseLevelMaxRange == 38.0)
+	{
+		baseLevelWeightEntries[0].EntryWeight = 1.0;
+		baseLevelWeightEntries[0].BaseLevelMinRange = 3.0;
+		baseLevelWeightEntries[0].BaseLevelMaxRange = 5.0;
+
+		baseLevelWeightEntries[1].EntryWeight = 0.825;
+		baseLevelWeightEntries[1].BaseLevelMinRange = 9.0;
+		baseLevelWeightEntries[1].BaseLevelMaxRange = 12.0;
+
+		baseLevelWeightEntries[2].EntryWeight = 0.820;
+		baseLevelWeightEntries[2].BaseLevelMinRange = 16.5;
+		baseLevelWeightEntries[2].BaseLevelMaxRange = 20.0;
+
+		baseLevelWeightEntries[3].EntryWeight = 0.815;
+		baseLevelWeightEntries[3].BaseLevelMinRange = 29.5;
+		baseLevelWeightEntries[3].BaseLevelMaxRange = 38.0;
 	}
 
 	int randomBaseLevel = APrimalDinoCharacter_GetRandomBaseLevel_original(_APrimalDinoCharacter, ForceRand_NotUsed);
