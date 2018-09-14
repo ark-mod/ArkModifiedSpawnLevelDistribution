@@ -1,5 +1,9 @@
 # ARK Beyond API: Modified Spawn Level Distribution (Plugin)
 
+## Contributions
+
+This plugin needs a new primary maintainer. If anyone wants to volunteer just let me know.
+
 ## Introduction
 
 Changes to spawn level distribution on The Island and Scorched Earth to match the official spawn level distribution on Ragnarok and The Center.
